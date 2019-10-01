@@ -5,10 +5,102 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Currency Converter</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/sytles.css">
 </head>
 
-<body>
+<body class="">
+  <header>
+    <nav class="navbar navbar-dark primary-color">
+      <a class="navbar-brand" href="#">CURRENCY CONVERTER</a>
+    </nav>
+  </header>
+  <div class="color-overlay"></div>
+  <div class="container d-flex justify-content-center align-items-center ">
+
+    <div class="row ">
+      <div class="col-4 text-center">
+        <!-- Card -->
+        <div class="card">
+          <!-- Card image -->
+          <div class="view overlay">
+            <img class="card-img-top" src="img/currency1.png" alt="Card image cap">
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+          <!-- Card content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="card-title"> WHAT I HAVE</h4>
+            <select id="from-currency" class="mdb-select md-form browser-default custom-select text-center">
+              <option value="USD">USD</option>
+              <option value="VND">VND</option>
+              <option value="EUR">EUR</option>
+              <option value="KRW">KRW</option>
+            </select>
+            <div class="md-form">
+              <input id="amount" type="number" class="form-control">
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+      </div>
+
+      <div class="col-4 d-flex justify-content-center align-items-center">
+        <button type="button" class="btn btn-primary z-depth-5 hoverable" onclick="convertCurrency()">
+          <i class="fas fa-sync" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="col-4 text-center">
+        <!-- Card -->
+        <div class="card z-depth-5 hoverable">
+          <!-- Card image -->
+          <div class="view overlay">
+            <img class="card-img-top" src="img/currency2.jpg" alt="Card image cap">
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+          <!-- Card content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="card-title"> WHAT I WANT</h4>
+            <select id="to-currency">
+              <option value="VND">VND</option>
+              <option value="KRW">KRW</option>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+            </select>
+            <div class="md-form">
+              <span id="result"></span>
+              <!-- <label for="form1">How much money do you have?</label> -->
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <span id="result"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 
